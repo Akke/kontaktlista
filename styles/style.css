@@ -1,0 +1,205 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+    font-weight: normal;
+}
+
+html,
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.3em;
+}
+
+input[type="text"],
+input[type="submit"],
+button {
+    border: 3px solid var(--input-border-color);
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+    color: var(--input-text-color);
+}
+
+input[type="text"]:disabled {
+    background-color: var(--input-border-color);
+    color: var(--input-text-color);
+}
+
+input[type="submit"], button {
+    background-color: var(--button-bg-color);
+    border: none;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+}
+
+input[type="text"]::placeholder {
+    color: var(--input-text-color);
+}
+
+.wrapper {
+    width: 30%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper .container {
+    background-color: var(--container-bg-color);
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    margin: -20px -20px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header .delete-list {
+    width: auto;
+    margin-left: auto;
+    background-color: #c64f4f;
+}
+
+.input-fields .form-error,
+.contacts-error {
+    background-color: #dd8686;
+    border-radius: 6px;
+    padding: 10px;
+    display: none;
+    margin-bottom: 10px;
+    color: #590000;
+}
+
+.input-fields .contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+.input-fields .contact-form .create {
+    grid-column: span 2;
+}
+
+.contacts-list {
+    margin: 40px 0 0 0;
+}
+
+.contacts-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacts-list ul li {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.contacts-list ul li button {
+    position: relative;
+}
+
+.contacts-list ul li button:before {
+    content: "";
+    display: none;
+    position: absolute;
+    background-color: #131313;
+    padding: 6px;
+    left: 50%;
+    top: -40px;
+    transform: translateX(-50%);
+    border-radius: 6px;
+    width: 200%;
+}
+
+.contacts-list ul li button:hover:before {
+    display: block;
+}
+
+.contacts-list ul li button.delete:before {
+    content: "Radera";
+}
+
+.contacts-list ul li button.edit:before {
+    content: "Ändra";
+}
+
+.contacts-list ul li button.edit,
+.contacts-list ul li button.delete {
+    width: auto;
+}
+
+.contacts-list ul li button.delete {
+    background-color: #c64f4f;
+}
+
+.contacts-list ul li button img {
+    height: 20px;
+    width: 20px;
+    pointer-events: none; /* behövs för att inte gör bilden klickbar */
+}
+
+.contacts-list ul li .input-container {
+    position: relative;
+}
+
+.contacts-list ul li .input-container input {
+    padding: 10px 10px 10px 35px;
+}
+
+.contacts-list ul li .input-container .icon {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    fill: var(--input-text-color);
+}
+
+.contacts-list ul li .input-container .icon-user {
+    background-image: url("../images/name.svg")
+}
+
+.contacts-list ul li .input-container .icon-number {
+    background-image: url("../images/phone.svg")
+}
+
+.contacts-list .no-contacts {
+    display: none;
+}

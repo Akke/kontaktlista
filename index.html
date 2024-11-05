@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/_variables.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Min Kontaktlista</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="input-fields">
+                <div class="header">
+                    <h1>Skapa Kontakt</h1>
+                </div>
+
+                <div class="form-error"></div>
+
+                <form method="post" class="contact-form">
+                    <input type="text" name="name" placeholder="Namn">
+                    <input type="text" name="phone" placeholder="Telefon">
+                    <input class="create" type="submit" value="Skapa">
+                </form>
+            </div>
+
+            <div class="contacts-list">
+                <div class="header">
+                    <h1>Kontakter (<span class="contact-count">3</span>)</h1>
+                    <button class="delete-list">Töm Kontaktlista</button>
+                </div>
+
+                <div class="contacts-error"></div>
+
+                <ul>
+                    <li id="1">
+                        <div class="input-container">
+                            <div class="icon icon-user"></div>
+                            <input name="name" type="text" placeholder="Namn" value="John Doe" disabled>
+                        </div>
+                        <div class="input-container">
+                            <div class="icon icon-number"></div>
+                            <input name="phone" type="text" placeholder="Telefon" value="+4612345678" disabled>
+                        </div>
+                        <button class="edit">
+                            <img src="images/edit.svg">
+                        </button>
+                        <button class="delete">
+                            <img src="images/delete.svg">
+                        </button>
+                    </li>
+
+                    <li id="2">
+                        <div class="input-container">
+                            <div class="icon icon-user"></div>
+                            <input name="name" type="text" placeholder="Namn" value="John Doe" disabled>
+                        </div>
+                        <div class="input-container">
+                            <div class="icon icon-number"></div>
+                            <input name="phone" type="text" placeholder="Telefon" value="+4612345678" disabled>
+                        </div>
+                        <button class="edit">
+                            <img src="images/edit.svg">
+                        </button>
+                        <button class="delete">
+                            <img src="images/delete.svg">
+                        </button>
+                    </li>
+
+                    <li id="3">
+                        <div class="input-container">
+                            <div class="icon icon-user"></div>
+                            <input name="name" type="text" placeholder="Namn" value="John Doe" disabled>
+                        </div>
+                        <div class="input-container">
+                            <div class="icon icon-number"></div>
+                            <input name="phone" type="text" placeholder="Telefon" value="+4612345678" disabled>
+                        </div>
+                        <button class="edit">
+                            <img src="images/edit.svg">
+                        </button>
+                        <button class="delete">
+                            <img src="images/delete.svg">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
