@@ -18,71 +18,33 @@
                 <div class="form-error"></div>
 
                 <form method="post" class="contact-form">
-                    <input type="text" name="name" placeholder="Namn">
-                    <input type="text" name="phone" placeholder="Telefon">
+                    <div class="input-container">
+                        <div class="icon icon-user"></div>
+                        <input type="text" name="name" placeholder="Namn">
+                    </div>
+
+                    <div class="input-container">
+                        <div class="icon icon-number"></div>
+                        <input type="text" name="phone" placeholder="Telefon">
+                    </div>
+                    
                     <input class="create" type="submit" value="Skapa">
                 </form>
             </div>
 
             <div class="contacts-list">
                 <div class="header">
-                    <h1>Kontakter (<span class="contact-count">3</span>)</h1>
-                    <button class="delete-list">Töm Kontaktlista</button>
+                    <h1>Kontakter (<span class="contact-count">0</span>)</h1>
+                    <button class="delete-list">
+                        <img src="images/delete.svg">
+                        <span>Töm Kontaktlista</span>
+                    </button>
                 </div>
 
                 <div class="contacts-error"></div>
 
                 <ul>
-                    <li id="1">
-                        <div class="input-container">
-                            <div class="icon icon-user"></div>
-                            <input name="name" type="text" placeholder="Namn" value="John Doe" disabled>
-                        </div>
-                        <div class="input-container">
-                            <div class="icon icon-number"></div>
-                            <input name="phone" type="text" placeholder="Telefon" value="+4612345678" disabled>
-                        </div>
-                        <button class="edit">
-                            <img src="images/edit.svg">
-                        </button>
-                        <button class="delete">
-                            <img src="images/delete.svg">
-                        </button>
-                    </li>
-
-                    <li id="2">
-                        <div class="input-container">
-                            <div class="icon icon-user"></div>
-                            <input name="name" type="text" placeholder="Namn" value="John Doe" disabled>
-                        </div>
-                        <div class="input-container">
-                            <div class="icon icon-number"></div>
-                            <input name="phone" type="text" placeholder="Telefon" value="+4612345678" disabled>
-                        </div>
-                        <button class="edit">
-                            <img src="images/edit.svg">
-                        </button>
-                        <button class="delete">
-                            <img src="images/delete.svg">
-                        </button>
-                    </li>
-
-                    <li id="3">
-                        <div class="input-container">
-                            <div class="icon icon-user"></div>
-                            <input name="name" type="text" placeholder="Namn" value="John Doe" disabled>
-                        </div>
-                        <div class="input-container">
-                            <div class="icon icon-number"></div>
-                            <input name="phone" type="text" placeholder="Telefon" value="+4612345678" disabled>
-                        </div>
-                        <button class="edit">
-                            <img src="images/edit.svg">
-                        </button>
-                        <button class="delete">
-                            <img src="images/delete.svg">
-                        </button>
-                    </li>
+                    
                 </ul>
             </div>
         </div>

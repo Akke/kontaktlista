@@ -86,6 +86,15 @@ input[type="text"]::placeholder {
     width: auto;
     margin-left: auto;
     background-color: #c64f4f;
+    display: flex;
+    justify-content: center;
+}
+
+.header .delete-list img {
+    height: 15px;
+    width: 15px;
+    pointer-events: none;
+    margin-right: 5px;
 }
 
 .input-fields .form-error,
@@ -172,15 +181,18 @@ input[type="text"]::placeholder {
     pointer-events: none; /* behövs för att inte gör bilden klickbar */
 }
 
-.contacts-list ul li .input-container {
+.contacts-list ul li .input-container,
+.contact-form .input-container {
     position: relative;
 }
 
-.contacts-list ul li .input-container input {
+.contacts-list ul li .input-container input,
+.contact-form .input-container input {
     padding: 10px 10px 10px 35px;
 }
 
-.contacts-list ul li .input-container .icon {
+.contacts-list ul li .input-container .icon,
+.contact-form .input-container .icon {
     position: absolute;
     height: 20px;
     width: 20px;
@@ -192,14 +204,45 @@ input[type="text"]::placeholder {
     fill: var(--input-text-color);
 }
 
-.contacts-list ul li .input-container .icon-user {
+.contacts-list ul li .input-container .icon-user,
+.contact-form .input-container .icon-user {
     background-image: url("../images/name.svg")
 }
 
-.contacts-list ul li .input-container .icon-number {
+.contacts-list ul li .input-container .icon-number,
+.contact-form .input-container .icon-number {
     background-image: url("../images/phone.svg")
 }
 
 .contacts-list .no-contacts {
     display: none;
+}
+
+@media (max-width: 1100px) {
+    .wrapper .container {
+        padding: 10px;
+    }
+
+    .input-fields .contact-form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header .delete-list {
+        margin: 10px 0 0;
+        width: 100%;
+    }
+
+    .contacts-list ul li {
+        flex-wrap: wrap;
+    }
+
+    .contacts-list ul li .input-container {
+        width: 100%;
+    }
 }

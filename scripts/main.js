@@ -78,6 +78,8 @@ function deleteContact(elem) {
     contactArray = contactArray.filter(item => item.element.id !== elem.id) 
 
     updateContactCount()
+
+    clearErrors()
 }
 
 function createContact(name, phone) {
@@ -114,6 +116,8 @@ function createContact(name, phone) {
     })
 
     updateContactCount()
+
+    clearErrors()
 }
 
 function updateContactCount() {
@@ -152,6 +156,18 @@ function displayError(errorText, errorType) {
     errorElement.style.display = "block"
 
     errorElement.innerHTML = errorText
+}
+
+function clearErrors() {
+    let contactCreationErrors = document.getElementsByClassName("form-error")[0]
+    if(contactCreationErrors) {
+        contactCreationErrors.style.display = "none"
+    }
+
+    let contactListErrors = document.getElementsByClassName("contacts-error")[0]
+    if(contactListErrors) {
+        contactListErrors.style.display = "none"
+    }
 }
 
 /*
