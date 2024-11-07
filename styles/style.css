@@ -53,6 +53,10 @@ input[type="submit"], button {
     cursor: pointer;
 }
 
+input[type="submit"]:hover, button:hover {
+    background-color: var(--button-bg-hover-color);
+}
+
 input[type="text"]::placeholder {
     color: var(--input-text-color);
 }
@@ -85,9 +89,13 @@ input[type="text"]::placeholder {
 .header .delete-list {
     width: auto;
     margin-left: auto;
-    background-color: #c64f4f;
+    background-color: var(--button-red-bg-color);
     display: flex;
     justify-content: center;
+}
+
+.header .delete-list:hover {
+    background-color: var(--button-red-bg-hover-color);
 }
 
 .header .delete-list img {
@@ -172,7 +180,11 @@ input[type="text"]::placeholder {
 }
 
 .contacts-list ul li button.delete {
-    background-color: #c64f4f;
+    background-color: var(--button-red-bg-color);
+}
+
+.contacts-list ul li button.delete:hover {
+    background-color: var(--button-red-bg-hover-color);
 }
 
 .contacts-list ul li button img {

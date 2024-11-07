@@ -5,4 +5,7 @@
     --input-border-color: #DADDEC;
     --input-text-color: #686a71;
     --button-bg-color: #4A65CA;
+    --button-bg-hover-color: #5875E4;
+    --button-red-bg-color: #c64f4f;
+    --button-red-bg-hover-color: #d75959;
 }
