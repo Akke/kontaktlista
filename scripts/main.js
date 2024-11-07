@@ -201,6 +201,11 @@ form.addEventListener("submit", function(e) {
     form.reset() // töm vårt formulär
 })
 
+/*
+    Vi lägger till en eventlistener till document av en anledning:
+    När vi skapar nya element dynamiskt med "insertBefore" så går det inte att lägga till en ny eventlistener för det nya elementet på samma sätt.
+    Då är det lättare att istället lyssna på när man klickar vart som helst på sidan och sen kolla vad klassnamnet på det elementet är, och matcha på det sättet.
+*/
 document.addEventListener("click", function(e) {
     let target = e.target
     
